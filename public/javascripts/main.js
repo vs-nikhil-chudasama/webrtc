@@ -328,7 +328,7 @@ window.addEventListener('beforeunload', function (e) {
     });
     console.log("Leaving local user is: ", userName);
     // ..........................Newly Edited
-    if (remoteUser) {
+    // if (remoteUser) {
         $.ajax({
             url: "/api/updateOnOtherUserClosing/" + remoteUser + "",
             type: "PUT",
@@ -336,7 +336,7 @@ window.addEventListener('beforeunload', function (e) {
                 console.log(response);
             },
         });
-    }
+    // }
 });
 
 window.addEventListener("unload", function (event) {
@@ -351,7 +351,7 @@ window.addEventListener("unload", function (event) {
         });
         console.log("Leaving local user is: ", userName);
         // ..........................Newly Edited
-        if (remoteUser){
+        // if (remoteUser){
             $.ajax({
                 url: "/api/updateOnOtherUserClosing/" + remoteUser + "",
                 type: "PUT",
@@ -360,7 +360,7 @@ window.addEventListener("unload", function (event) {
                 },
             });
             console.log("Leaving remote user is: ", remoteUser);
-        }
+        // }
         // ..........................Newly Edited
         console.log("This is Chrome");
     } else if (navigator.userAgent.indexOf("Firefox") != -1) {
@@ -375,7 +375,7 @@ window.addEventListener("unload", function (event) {
         });
         console.log("Leaving local user is: ", userName);
         // ..........................Newly Edited
-        if (remoteUser) {
+        // if (remoteUser) {
             $.ajax({
                 url: "/api/updateOnOtherUserClosing/" + remoteUser + "",
                 type: "PUT",
@@ -385,7 +385,7 @@ window.addEventListener("unload", function (event) {
                 },
             });
             console.log("Leaving remote user is: ", remoteUser);
-        }
+        // }
         // ..........................Newly Edited
 
         console.log("This is Firefox");
